@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  char nome[15];
+  int comprimento;
+  strcpy(nome, "Matheus"); 
+  printf("Nome = %s", nome); // Nome: Matheus
+  gets(nome);
+  comprimento = strlen(nome); // Matheus possui 7 caracteres
+ 
+  printf("Seu nome tem  %d caracteres.\n", comprimento);
+
+ char str1[8] = "Matheus Brito";
+ char str2[7];
+ 
+ strncpy(str2, str1, 5); // Str2 ira  copiar a str1 com um limite dos 7 caracteres que foi imposto a ela. No caso ela imprimirá apenas MATHEUS.
+ str2[5] = '\0';
+ printf("str2 = %s\n", str2);
+ 
+ system ("pause");
+ return 0;
+}
